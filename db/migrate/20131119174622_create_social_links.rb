@@ -10,6 +10,7 @@ class CreateSocialLinks < ActiveRecord::Migration
       t.string :pinterest
       t.string :googleplus
       t.string :weibo
+      t.string :website
 
       t.timestamps
     end
