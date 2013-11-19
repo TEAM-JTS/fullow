@@ -10,6 +10,10 @@ class PlayersController < ApplicationController
   # GET /players/1
   # GET /players/1.json
   def show
+    query = YahooNba::Query.new ENV['YAHOO_OAUTH_KEY'], ENV['YAHOO_OAUTH_SECRET']
+    @hash = query.get_player_stats_hash_with_player_key(@player.yahoo_id)
+    @player_stats = @hash["player_stats"]
+    binding.pry
   end
 
   # GET /players/new

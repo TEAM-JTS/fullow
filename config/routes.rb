@@ -1,5 +1,5 @@
 Fullow::Application.routes.draw do
-  root 'application#index'
+  root 'players#index'
 
   # get 'players' => 'players#index'
   # get 'players/:id' => 'players#show'
