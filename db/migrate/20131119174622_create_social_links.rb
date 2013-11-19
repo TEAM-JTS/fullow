@@ -11,6 +11,7 @@ class CreateSocialLinks < ActiveRecord::Migration
       t.string :googleplus
       t.string :weibo
       t.string :website
+      t.integer :player_id
 
       t.timestamps
     end

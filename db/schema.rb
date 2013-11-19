@@ -84,6 +84,7 @@ ActiveRecord::Schema.define(version: 20131119174853) do
     t.string   "pinterest"
     t.string   "googleplus"
     t.string   "weibo"
+    t.string   "website"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

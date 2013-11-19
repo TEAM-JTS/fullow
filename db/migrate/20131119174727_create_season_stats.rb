@@ -13,6 +13,7 @@ class CreateSeasonStats < ActiveRecord::Migration
       t.string :stl
       t.string :turnovers
       t.string :pts
+      t.integer :player_id
 
       t.timestamps
     end
