@@ -1,4 +1,14 @@
 Fullow::Application.routes.draw do
+  resources :career_stats
+
+  resources :season_stats
+
+  resources :game_stats
+
+  resources :social_links
+
+  resources :players
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

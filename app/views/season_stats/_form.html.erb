@@ -1,0 +1,21 @@
+<%= form_for(@season_stat) do |f| %>
+  <% if @season_stat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@season_stat.errors.count, "error") %> prohibited this season_stat from being saved:</h2>
+
+      <ul>
+      <% @season_stat.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :player_id %><br>
+    <%= f.text_field :player_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
