@@ -1,13 +1,15 @@
 Fullow::Application.routes.draw do
-  resources :career_stats
+  root 'application#index'
 
-  resources :season_stats
-
-  resources :game_stats
-
-  resources :social_links
+  # get 'players' => 'players#index'
+  # get 'players/:id' => 'players#show'
 
   resources :players
+  # resources :career_stats
+  # resources :season_stats
+  # resources :game_stats
+  # resources :social_links
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
