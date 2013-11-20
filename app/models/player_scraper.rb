@@ -1,29 +1,27 @@
 class PlayerScraper
   require 'open-uri'
 
-  attr_reader :player_data, :slug, :picture, :most_recent_0, :most_recent_1,:most_recent_2,:most_recent_3,:most_recent_4, :season_averages_hash, :career_averages_hash, :game_day, :game_time, :game_matchup
+  attr_reader :player, :espn_url, :player_data, :picture, :most_recent_0, :most_recent_1,:most_recent_2,:most_recent_3,:most_recent_4, :season_averages_hash, :career_averages_hash, :game_day, :game_time, :game_matchup
 
-
-    agent = Mechanize.new
-  page = agent.get('http://search.espn.go.com/jeremy-lin')
-
-  puts page.links_with(:text => 'Jeremy Lin').first.href
-
-  def initialize(slug)
-    @slug = slug
+  def initialize(player)
+    @player = player
+    self.call
   end
 
   def call
-    #find URL (mechanize)
     scrape_stats(find_espn_url)
-    #scrape player stats (methods vvv)
+    get_picture
+    get_last_game_stats
+    get_season_averages
+    get_career_averages
+    get_next_game_info
   end
 
   def find_espn_url
     agent = Mechanize.new
-    page = agent.get("http://search.espn.go.com/#{@slug}")
+    page = agent.get("http://search.espn.go.com/#{@player.slug}")
+    @espn_url = page.links_with(:text => @player.fullname).first.href
   end
-
 
   def scrape_stats(url)
     @player_data = Nokogiri::HTML(open(url))

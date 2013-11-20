@@ -7,4 +7,8 @@ class Player < ActiveRecord::Base
   def fullname
     "#{self.firstname} #{self.lastname}"
   end
+
+  def slug
+    "#{self.firstname} #{self.lastname}".downcase.gsub(" ", "-")
+  end
 end

@@ -10,9 +10,8 @@ class PlayersController < ApplicationController
   # GET /players/1
   # GET /players/1.json
   def show
-    url =  "http://espn.go.com/nba/player/_/id/4299/jeremy-lin"
-    @scraper = PlayerScraper.new(@player.slug)
-    @scraper.call
+    # url =  "http://espn.go.com/nba/player/_/id/4299/jeremy-lin"
+    @scraper = PlayerScraper.new(@player)
   end
 
   # GET /players/new
