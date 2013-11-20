@@ -1,4 +1,11 @@
-
+<script type="text/javascript">
+$(function() {
+    var availablePlayers = <%= raw @players_array %>;
+    $( "#players" ).autocomplete({
+      source: availablePlayers
+    });
+  });
+</script>
 
 <h1>Search</h1>
 <div class="ui-widget">

@@ -5,6 +5,7 @@ class PlayersController < ApplicationController
   # GET /players.json
   def index
     @players = Player.all
+    @players_array = @players.map {|p| p.fullname }
   end
 
   # GET /players/1
