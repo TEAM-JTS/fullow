@@ -517,69 +517,24 @@ SocialLink.create(
   googleplus: "https://plus.google.com/+carmeloanthony/posts", 
   weibo: "http://www.weibo.com/carmeloanthony", 
   website: "http://www.thisismelo.com/")
-SocialLink.create(
-  player_id: 58, 
-  twitter: "https://twitter.com/chrisbosh", 
-  youtube: "", 
-  facebook: "https://www.facebook.com/OfficialChrisBosh", 
-  tumblr: "http://teambosh.tumblr.com/", 
-  instagram: "http://instagram.com/chrisbosh", 
-  pinterest: "", 
-  googleplus: "", 
-  weibo: "", 
-  website: "http://www.chrisbosh.com/")
-SocialLink.create(
-  player_id: 67, 
-  twitter: "https://twitter.com/kobebryant", 
-  youtube: "", 
-  facebook: "https://www.facebook.com/Kobe", 
-  tumblr: "", 
-  instagram: "http://instagram.com/kobebryant", 
-  pinterest: "", 
-  googleplus: "", 
-  weibo: "", 
-  website: "http://kobebryant.com/")
-SocialLink.create(
-  player_id: 88, 
-  twitter: "https://twitter.com/tysonchandler", 
-  youtube: "", 
-  facebook: "https://www.facebook.com/tysonchandler", 
-  tumblr: "", 
-  instagram: "", 
-  pinterest: "", 
-  googleplus: "https://plus.google.com/114052512597012721199/posts", 
-  weibo: "", 
-  website: "http://tysonchandler.com/")
-SocialLink.create(
-  player_id: 224, 
-  twitter: "https://twitter.com/kingjames", 
-  youtube: "", 
-  facebook: "https://www.facebook.com/LeBron", 
-  tumblr: "", 
-  instagram: "", 
-  pinterest: "", 
-  googleplus: "", 
-  weibo: "", 
-  website: "http://www.lebronjames.com/")
-SocialLink.create(
-  player_id: 275, 
-  twitter: "https://twitter.com/JLin7", 
-  youtube: "http://www.youtube.com/thejlin7", 
-  facebook: "https://www.facebook.com/jeremylin7", 
-  tumblr: "", 
-  instagram: "", 
-  pinterest: "", 
-  googleplus: "", 
-  weibo: "http://www.weibo.com/jlin7", 
-  website: "http://www.jlin7.com/")
-SocialLink.create(
-  player_id: 389, 
-  twitter: "https://twitter.com/drose", 
-  youtube: "http://www.youtube.com/derrickrose", 
-  facebook: "https://www.facebook.com/derrickrose", 
-  tumblr: "", 
-  instagram: "", 
-  pinterest: "", 
-  googleplus: "", 
-  weibo: "http://t.qq.com/DerrickRose", 
-  website: "http://www.drosehoops.com/")
+# SocialLink.build_n58(
+#   twitter: "https://twitter.com/chrisbosh", 
+#   youtube: "", 
+#   facebook: "https://www.facebook.com/OfficialChrisBosh", 
+#   tumblr: "http://teambosh.tumblr.com/", 
+#   instagram: "http://instagram.com/chrisbosh", 
+#   pinterest: "", 
+#   googleplus: "", 
+#   weibo: "", 
+#   website: "http://www.chrisbosh.com/")
+# SocialLink.create(
+#   player_id: , 
+#   twitter: "", 
+#   youtube: "", 
+#   facebook: "", 
+#   tumblr: "", 
+#   instagram: "", 
+#   pinterest: "", 
+#   googleplus: "", 
+#   weibo: "", 
+#   website: "")
