@@ -1,56 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<%= link_to 'Search', players_path %>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Firstname:</strong>
-  <%= @player.firstname %>
-</p>
 
-<p>
-  <strong>Lastname:</strong>
-  <%= @player.lastname %>
-</p>
+<div class="container-fluid">
+  <div class="row-fluid">
 
-<p>
-  <strong>Picture: </strong>
-  <img src="<%= @scraper.picture %>">
-</p>
+  <div class="col-sm-6">
+    <h1><%= @player.firstname %> <%= @player.lastname %></h1>
+    <img src="<%= @scraper.picture %>">
+  </div>
 
-<p>
-  <strong>Most Recent Game Stats: </strong>
-  <%= @scraper.most_recent_0 %>
-  <%= @scraper.most_recent_1 %>
-  <%= @scraper.most_recent_2 %>
-  <%= @scraper.most_recent_3 %>
-  <%= @scraper.most_recent_4 %>
-</p>
+  <div class="col-sm-6">
+    <p>
+      <strong>Most Recent Game Stats: </strong>
+      <%= @scraper.most_recent_0 %>
+      <%= @scraper.most_recent_1 %>
+      <%= @scraper.most_recent_2 %>
+      <%= @scraper.most_recent_3 %>
+      <%= @scraper.most_recent_4 %>
+    </p>
 
-<p>
-  <strong>Season Averages</strong>
-  <%= @scraper.season_averages_hash %>
-</p>
+    <p>
+      <strong>Season Averages</strong>
+      <%= @scraper.season_averages_hash %>
+    </p>
 
-<p>
-  <strong>Career Averages</strong>
-  <%= @scraper.career_averages_hash %>
-</p>
+    <p>
+      <strong>Career Averages</strong>
+      <%= @scraper.career_averages_hash %>
+    </p>
 
-<p>
-  <strong>Game Day</strong>
-  <%= @scraper.game_day %>
-</p>
+    <p>
+      <strong>Game Day</strong>
+      <%= @scraper.game_day %>
+    </p>
 
-<p>
-  <strong>Game Time</strong>
-  <%= @scraper.game_time %>
-</p>
+    <p>
+      <strong>Game Time</strong>
+      <%= @scraper.game_time %>
+    </p>
 
-<p>
-  <strong>Game Matchup</strong>
-  <%= @scraper.game_matchup %>
-</p>
+    <p>
+      <strong>Game Matchup</strong>
+      <%= @scraper.game_matchup %>
+    </p>
+  </div>
 
-<a class="twitter-timeline" href="https://twitter.com/jlin7" data-widget-id="402571380798922752" data-screen-name="<%= @player.social_link.twitter.gsub("https://twitter.com/","") %>"></a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+</div>
 
 
-<%= link_to 'Search', players_path %>
+<div class="row">
+
+  <div class="col-sm-6">
+    <a class="twitter-timeline" href="https://twitter.com/jlin7" data-widget-id="402571380798922752" data-screen-name="<%= @player.social_link.twitter.gsub("https://twitter.com/","") %>"></a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  </div>
+
+</div>
+
+</html>
