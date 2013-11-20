@@ -32,7 +32,6 @@ n17 = Player.create(firstname: "Carmelo", lastname: "Anthony").build_social_link
   googleplus: "https://plus.google.com/+carmeloanthony/posts", 
   weibo: "http://www.weibo.com/carmeloanthony", 
   website: "http://www.thisismelo.com/").save
-
 n18 = Player.create(firstname: "Joel", lastname: "Anthony")
 n19 = Player.create(firstname: "Pero", lastname: "Antic")
 n20 = Player.create(firstname: "Trevor", lastname: "Ariza")
@@ -73,7 +72,16 @@ n54 = Player.create(firstname: "Andrew", lastname: "Bogut")
 n55 = Player.create(firstname: "Matt", lastname: "Bonner")
 n56 = Player.create(firstname: "Trevor", lastname: "Booker")
 n57 = Player.create(firstname: "Carlos", lastname: "Boozer")
-n58 = Player.create(firstname: "Chris", lastname: "Bosh")
+n58 = Player.create(firstname: "Chris", lastname: "Bosh").build_social_link(
+  twitter: "https://twitter.com/chrisbosh", 
+  youtube: "", 
+  facebook: "https://www.facebook.com/OfficialChrisBosh", 
+  tumblr: "http://teambosh.tumblr.com/", 
+  instagram: "http://instagram.com/chrisbosh", 
+  pinterest: "", 
+  googleplus: "", 
+  weibo: "", 
+  website: "http://www.chrisbosh.com/").save
 n59 = Player.create(firstname: "Avery", lastname: "Bradley")
 n60 = Player.create(firstname: "Elton", lastname: "Brand")
 n61 = Player.create(firstname: "Corey", lastname: "Brewer")
@@ -82,7 +90,16 @@ n63 = Player.create(firstname: "Aaron", lastname: "Brooks")
 n64 = Player.create(firstname: "MarShon", lastname: "Brooks")
 n65 = Player.create(firstname: "Kwame", lastname: "Brown")
 n66 = Player.create(firstname: "Sherwood", lastname: "Brown")
-n67 = Player.create(firstname: "Kobe", lastname: "Bryant")
+n67 = Player.create(firstname: "Kobe", lastname: "Bryant").build_social_link(
+  twitter: "https://twitter.com/kobebryant", 
+  youtube: "", 
+  facebook: "https://www.facebook.com/Kobe", 
+  tumblr: "", 
+  instagram: "http://instagram.com/kobebryant", 
+  pinterest: "", 
+  googleplus: "", 
+  weibo: "", 
+  website: "http://kobebryant.com/").save
 n68 = Player.create(firstname: "Chase", lastname: "Budinger")
 n69 = Player.create(firstname: "Reggie", lastname: "Bullock")
 n70 = Player.create(firstname: "Trey", lastname: "Burke")
@@ -103,7 +120,16 @@ n84 = Player.create(firstname: "Vince", lastname: "Carter")
 n85 = Player.create(firstname: "Michael", lastname: "Carter-Williams")
 n86 = Player.create(firstname: "Omri", lastname: "Casspi")
 n87 = Player.create(firstname: "Mario", lastname: "Chalmers")
-n88 = Player.create(firstname: "Tyson", lastname: "Chandler")
+n88 = Player.create(firstname: "Tyson", lastname: "Chandler").build_social_link(
+  twitter: "https://twitter.com/tysonchandler", 
+  youtube: "", 
+  facebook: "https://www.facebook.com/tysonchandler", 
+  tumblr: "", 
+  instagram: "", 
+  pinterest: "", 
+  googleplus: "https://plus.google.com/114052512597012721199/posts", 
+  weibo: "", 
+  website: "http://tysonchandler.com/").save
 n89 = Player.create(firstname: "Wilson", lastname: "Chandler")
 n90 = Player.create(firstname: "Josh", lastname: "Childress")
 n91 = Player.create(firstname: "Dionte", lastname: "Christmas")
@@ -239,7 +265,16 @@ n220 = Player.create(firstname: "Jarrett", lastname: "Jack")
 n221 = Player.create(firstname: "Aaron", lastname: "Jackson")
 n222 = Player.create(firstname: "Reggie", lastname: "Jackson")
 n223 = Player.create(firstname: "Bernard", lastname: "James")
-n224 = Player.create(firstname: "LeBron", lastname: "James")
+n224 = Player.create(firstname: "LeBron", lastname: "James").build_social_link(
+  twitter: "https://twitter.com/kingjames", 
+  youtube: "", 
+  facebook: "https://www.facebook.com/LeBron", 
+  tumblr: "", 
+  instagram: "", 
+  pinterest: "", 
+  googleplus: "", 
+  weibo: "", 
+  website: "http://www.lebronjames.com/").save
 n225 = Player.create(firstname: "Mike", lastname: "James")
 n226 = Player.create(firstname: "Antawn", lastname: "Jamison")
 n227 = Player.create(firstname: "Al", lastname: "Jefferson")
@@ -290,7 +325,16 @@ n271 = Player.create(firstname: "Meyers", lastname: "Leonard")
 n272 = Player.create(firstname: "Jon", lastname: "Leuer")
 n273 = Player.create(firstname: "Rashard", lastname: "Lewis")
 n274 = Player.create(firstname: "Damian", lastname: "Lillard")
-n275 = Player.create(firstname: "Jeremy", lastname: "Lin")
+n275 = Player.create(firstname: "Jeremy", lastname: "Lin").build_social_link(
+  twitter: "https://twitter.com/JLin7", 
+  youtube: "http://www.youtube.com/thejlin7", 
+  facebook: "https://www.facebook.com/jeremylin7", 
+  tumblr: "",
+  instagram: "", 
+  pinterest: "", 
+  googleplus: "", 
+  weibo: "http://www.weibo.com/jlin7", 
+  website: "http://www.jlin7.com/").save
 n276 = Player.create(firstname: "Shaun", lastname: "Livingston")
 n277 = Player.create(firstname: "Brook", lastname: "Lopez")
 n278 = Player.create(firstname: "Raul", lastname: "Lopez")
@@ -404,7 +448,16 @@ n385 = Player.create(firstname: "Brian", lastname: "Roberts")
 n386 = Player.create(firstname: "Nate", lastname: "Robinson")
 n387 = Player.create(firstname: "Thomas", lastname: "Robinson")
 n388 = Player.create(firstname: "Rajon", lastname: "Rondo")
-n389 = Player.create(firstname: "Derrick", lastname: "Rose")
+n389 = Player.create(firstname: "Derrick", lastname: "Rose").build_social_link(
+  twitter: "https://twitter.com/drose", 
+  youtube: "http://www.youtube.com/derrickrose", 
+  facebook: "https://www.facebook.com/derrickrose", 
+  tumblr: "", 
+  instagram: "", 
+  pinterest: "", 
+  googleplus: "", 
+  weibo: "http://t.qq.com/DerrickRose", 
+  website: "http://www.drosehoops.com/").save
 n390 = Player.create(firstname: "Terrence", lastname: "Ross")
 n391 = Player.create(firstname: "Moran", lastname: "Roth")
 n392 = Player.create(firstname: "Ricky", lastname: "Rubio")
@@ -516,70 +569,3 @@ n497 = Player.create(firstname: "Nikos", lastname: "Zisis")
 n498 = Player.create(firstname: "Luka", lastname: "Zoric")
 n499 = Player.create(firstname: "Aleksey", lastname: "Zozulin")
 
-
-SocialLink.create(
-  player_id: 58, 
-  twitter: "https://twitter.com/chrisbosh", 
-  youtube: "", 
-  facebook: "https://www.facebook.com/OfficialChrisBosh", 
-  tumblr: "http://teambosh.tumblr.com/", 
-  instagram: "http://instagram.com/chrisbosh", 
-  pinterest: "", 
-  googleplus: "", 
-  weibo: "", 
-  website: "http://www.chrisbosh.com/")
-SocialLink.create(
-  player_id: 67, 
-  twitter: "https://twitter.com/kobebryant", 
-  youtube: "", 
-  facebook: "https://www.facebook.com/Kobe", 
-  tumblr: "", 
-  instagram: "http://instagram.com/kobebryant", 
-  pinterest: "", 
-  googleplus: "", 
-  weibo: "", 
-  website: "http://kobebryant.com/")
-SocialLink.create(
-  player_id: 88, 
-  twitter: "https://twitter.com/tysonchandler", 
-  youtube: "", 
-  facebook: "https://www.facebook.com/tysonchandler", 
-  tumblr: "", 
-  instagram: "", 
-  pinterest: "", 
-  googleplus: "https://plus.google.com/114052512597012721199/posts", 
-  weibo: "", 
-  website: "http://tysonchandler.com/")
-SocialLink.create(
-  player_id: 224, 
-  twitter: "https://twitter.com/kingjames", 
-  youtube: "", 
-  facebook: "https://www.facebook.com/LeBron", 
-  tumblr: "", 
-  instagram: "", 
-  pinterest: "", 
-  googleplus: "", 
-  weibo: "", 
-  website: "http://www.lebronjames.com/")
-SocialLink.create(
-  player_id: 275, 
-  twitter: "https://twitter.com/JLin7", 
-  youtube: "http://www.youtube.com/thejlin7", 
-  facebook: "https://www.facebook.com/jeremylin7", 
-  tumblr: "",
-  instagram: "", 
-  pinterest: "", 
-  googleplus: "", 
-  weibo: "http://www.weibo.com/jlin7", 
-  website: "http://www.jlin7.com/")
-SocialLink.create(
-  player_id: 389, 
-  twitter: "https://twitter.com/drose", 
-  youtube: "http://www.youtube.com/derrickrose", 
-  facebook: "https://www.facebook.com/derrickrose", 
-  tumblr: "", 
-  instagram: "", 
-  pinterest: "", 
-  googleplus: "", 
-  weibo: "http://t.qq.com/DerrickRose", 
-  website: "http://www.drosehoops.com/")
