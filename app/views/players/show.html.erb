@@ -4,6 +4,11 @@
 <p id="notice"><%= notice %></p>
 
 
+<% @list.each do |part| %>
+  <iframe width="200" height="150" src="//www.youtube.com/embed/<%= part %>" frameborder="0" allowfullscreen></iframe>
+<% end %>
+
+
 <div class="container-fluid">
   <div class="row-fluid">
 
@@ -57,6 +62,10 @@
   <div class="col-sm-6">
     <a class="twitter-timeline" href="https://twitter.com/jlin7" data-widget-id="402571380798922752" data-screen-name="<%= @player.social_link.twitter.gsub("https://twitter.com/","") %>"></a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  </div>
+
+  <div class="col-sm-6">
+    <iframe width="560" height="315" src="//www.youtube.com/embed/5RzI6_4-_jQ" frameborder="0" allowfullscreen></iframe>
   </div>
 
 </div>
