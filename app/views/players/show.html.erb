@@ -50,10 +50,8 @@
 </p>
 <%= @player.social_link.twitter %>
 
-<a class="twitter-timeline" href="https://twitter.com/jlin7" data-widget-id="402571380798922752">Tweets by @JLin7</a>
+<a class="twitter-timeline" href="https://twitter.com/jlin7" data-widget-id="402571380798922752" data-screen-name="<%= @player.social_link.twitter.gsub("https://twitter.com/","") %>">Tweets</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 
-
-<%= link_to 'Edit', edit_player_path(@player) %> |
-<%= link_to 'Back', players_path %>
+<%= link_to 'Search', players_path %>
