@@ -1,40 +1,18 @@
 <script type="text/javascript">
 $(function() {
-    var availablePlayers = <%= raw @players_array %>;
+    var availablePlayers = <%= raw @players_hash.to_json %>;
+
     $( "#players" ).autocomplete({
-      source: availablePlayers
+      source: availablePlayers,
+      select: function( event, ui ) {
+        window.location.href = ui.item.value;
+      }
     });
   });
 </script>
 
-<h1>Search</h1>
+<h1>NBA Stalker</h1>
 <div class="ui-widget">
-  <label for="players">Players : </label>
-  <input id="players" />
+  <input id="players" placeholder="Jeremy Lin" /><br>
+  <label for="players">Search for your favorite player</label>
 </div>
-
-
-<h1>Player List</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @players.each do |player| %>
-      <tr>
-        <% @fullname = player.firstname.to_s + " " + player.lastname.to_s %>
-        <td><%= link_to @fullname, player %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Player', new_player_path %>

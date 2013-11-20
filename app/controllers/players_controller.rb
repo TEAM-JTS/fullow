@@ -5,7 +5,9 @@ class PlayersController < ApplicationController
   # GET /players.json
   def index
     @players = Player.all
-    @players_array = @players.map {|p| p.fullname }
+    @players_hash = @players.map do |p|
+      { label: p.fullname, value: player_path(p.id) }
+    end
   end
 
   # GET /players/1
