@@ -1,4 +1,10 @@
 <p id="notice"><%= notice %></p>
+<div>
+<% @list.each do |part| %>
+  <iframe width="200" height="150" src="//www.youtube.com/embed/<%= part %>" frameborder="0" allowfullscreen></iframe>
+<% end %>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/5RzI6_4-_jQ" frameborder="0" allowfullscreen></iframe>
 
 <p>
   <strong>Firstname:</strong>

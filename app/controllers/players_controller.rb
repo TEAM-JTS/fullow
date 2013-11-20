@@ -12,6 +12,16 @@ class PlayersController < ApplicationController
   def show
     # url =  "http://espn.go.com/nba/player/_/id/4299/jeremy-lin"
     @scraper = PlayerScraper.new(@player)
+    # @client = YouTubeIt::Client.new(:dev_key => "AIzaSyDCicB-RjFX2ou51ryyGxjiDS-p1WC0dNE")
+    # @videos_hash = @client.videos_by(:query => "official jeremy lin", :page => 1, :per_page => 5)
+    
+    # @first_video_url = @videos_hash.videos.first.media_content[0].url
+
+    @list = GetSocial.new.get_youtube(@player.fullname)
+    
+
+    #<iframe width="560" height="315" src="//www.youtube.com/embed/q14ooGPJZBs" frameborder="0" allowfullscreen></iframe>
+
   end
 
   # GET /players/new
