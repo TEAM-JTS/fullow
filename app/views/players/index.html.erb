@@ -6,8 +6,22 @@ $(function() {
       source: availablePlayers,
       select: function( event, ui ) {
         window.location.href = ui.item.value;
+        event.preventDefault();
       }
     });
+
+    $(document).keypress(function(e) {
+      if(e.which == 13) {
+        var player_choice = $( "#players" ).val();
+        var player_hash = $.grep(availablePlayers, function(hash){
+          return hash.label.toLowerCase() == player_choice.toLowerCase();
+        });
+        var value = player_hash[0].value;
+        window.location.href = value;
+        // console.log(player_hash[0].value)
+      }
+    });
+
   });
 </script>
 
