@@ -22,7 +22,17 @@ n13 = Player.create(firstname: "Alan", lastname: "Anderson")
 n14 = Player.create(firstname: "James", lastname: "Anderson")
 n15 = Player.create(firstname: "Ryan", lastname: "Anderson")
 n16 = Player.create(firstname: "Giannis", lastname: "Antetokounmpo")
-n17 = Player.create(firstname: "Carmelo", lastname: "Anthony")
+n17 = Player.create(firstname: "Carmelo", lastname: "Anthony").build_social_link(
+  twitter: "https://twitter.com/carmeloanthony", 
+  youtube: "http://www.youtube.com/ThisIsMeloTV", 
+  facebook: "https://www.facebook.com/CarmeloAnthony", 
+  tumblr: "http://carmelo-anthony.tumblr.com/", 
+  instagram: "http://instagram.com/carmeloanthony", 
+  pinterest: "https://www.pinterest.com/carmeloanthony/", 
+  googleplus: "https://plus.google.com/+carmeloanthony/posts", 
+  weibo: "http://www.weibo.com/carmeloanthony", 
+  website: "http://www.thisismelo.com/").save
+
 n18 = Player.create(firstname: "Joel", lastname: "Anthony")
 n19 = Player.create(firstname: "Pero", lastname: "Antic")
 n20 = Player.create(firstname: "Trevor", lastname: "Ariza")
@@ -506,17 +516,7 @@ n497 = Player.create(firstname: "Nikos", lastname: "Zisis")
 n498 = Player.create(firstname: "Luka", lastname: "Zoric")
 n499 = Player.create(firstname: "Aleksey", lastname: "Zozulin")
 
-SocialLink.create(
-  player_id: 17, 
-  twitter: "https://twitter.com/carmeloanthony", 
-  youtube: "http://www.youtube.com/ThisIsMeloTV", 
-  facebook: "https://www.facebook.com/CarmeloAnthony", 
-  tumblr: "http://carmelo-anthony.tumblr.com/", 
-  instagram: "http://instagram.com/carmeloanthony", 
-  pinterest: "https://www.pinterest.com/carmeloanthony/", 
-  googleplus: "https://plus.google.com/+carmeloanthony/posts", 
-  weibo: "http://www.weibo.com/carmeloanthony", 
-  website: "http://www.thisismelo.com/")
+
 SocialLink.create(
   player_id: 58, 
   twitter: "https://twitter.com/chrisbosh", 
@@ -566,7 +566,7 @@ SocialLink.create(
   twitter: "https://twitter.com/JLin7", 
   youtube: "http://www.youtube.com/thejlin7", 
   facebook: "https://www.facebook.com/jeremylin7", 
-  tumblr: "", 
+  tumblr: "",
   instagram: "", 
   pinterest: "", 
   googleplus: "", 
