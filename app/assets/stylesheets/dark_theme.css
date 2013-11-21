@@ -2,6 +2,9 @@
 
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 
+
+.fb-comments, .fb-comments iframe[style] {width: 100% !important;}
+
 article,
 aside,
 details,
