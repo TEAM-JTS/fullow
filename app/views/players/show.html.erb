@@ -1,59 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
 <%= link_to 'Search', players_path %>
 <p id="notice"><%= notice %></p>
-
-
-<% @list.each do |part| %>
-  <iframe width="200" height="150" src="//www.youtube.com/embed/<%= part %>" frameborder="0" allowfullscreen></iframe>
-<% end %>
-
-
-<div class="container-fluid">
-  <div class="row-fluid">
-
-  <div class="col-sm-6">
-    <h1><%= @player.firstname %> <%= @player.lastname %></h1>
-    <img src="<%= @scraper.picture %>">
+<div class="row">
+  <div class="col-md-6">
+    <div class="jumbotron">
+      <h1><%= @player.firstname %> <%= @player.lastname %></h1>
+      <img src="<%= @scraper.picture %>">
+    </div>
   </div>
 
-  <div class="col-sm-6">
-    <p>
-      <strong>Most Recent Game Stats: </strong>
-      <%= @scraper.most_recent_0 %>
-      <%= @scraper.most_recent_1 %>
-      <%= @scraper.most_recent_2 %>
-      <%= @scraper.most_recent_3 %>
-      <%= @scraper.most_recent_4 %>
-    </p>
+  <div class="col-md-6">
+    <div class="panel panel-danger">
+      <div class="panel-heading">
+        <span class="panel-title">Last Game</span>
+        <span class="pull-right"><%= last_game_date %></span>
+      </div>
+      <div class="panel-body">
+        <%= last_game_result %>
+        <%= top_three_stats %>
+      </div>
+    </div>
 
-    <p>
-      <strong>Season Averages</strong>
-      <%= @scraper.season_averages_hash %>
-    </p>
+    <div class="row">
+      <p>
+        <strong>Most Recent Game Stats: </strong>
+        <%= @scraper.most_recent_0 %>
+        <%= @scraper.most_recent_1 %>
+        <%= @scraper.most_recent_2 %>
+        <%= @scraper.most_recent_3 %>
+        <%= @scraper.most_recent_4 %>
+      </p>
 
-    <p>
-      <strong>Career Averages</strong>
-      <%= @scraper.career_averages_hash %>
-    </p>
+      <p>
+        <strong>Season Averages</strong>
+        <%= @scraper.season_averages_hash %>
+      </p>
 
-    <p>
-      <strong>Game Day</strong>
-      <%= @scraper.game_day %>
-    </p>
+      <p>
+        <strong>Career Averages</strong>
+        <%= @scraper.career_averages_hash %>
+      </p>
 
-    <p>
-      <strong>Game Time</strong>
-      <%= @scraper.game_time %>
-    </p>
+      <p>
+        <strong>Game Day</strong>
+        <%= @scraper.game_day %>
+      </p>
 
-    <p>
-      <strong>Game Matchup</strong>
-      <%= @scraper.game_matchup %>
-    </p>
+      <p>
+        <strong>Game Time</strong>
+        <%= @scraper.game_time %>
+      </p>
+
+      <p>
+        <strong>Game Matchup</strong>
+        <%= @scraper.game_matchup %>
+      </p>
+    </div>
   </div>
 
-</div>
+
 </div>
 
 
@@ -65,7 +69,9 @@
   </div>
 
   <div class="col-sm-6">
-    <iframe width="560" height="315" src="//www.youtube.com/embed/5RzI6_4-_jQ" frameborder="0" allowfullscreen></iframe>
+    <% @list.each do |part| %>
+      <iframe width="560" height="315" src="//www.youtube.com/embed/<%= part %>" frameborder="0" allowfullscreen></iframe><br>
+    <% end %>
   </div>
 
 </div>
