@@ -18,10 +18,31 @@ module PlayersHelper
     }
     hash.sort_by { |k,v| v }.reverse[0..2].map do |stat_array|
       long_ass_string = <<-eos
-      <li><strong>#{stat_array[1]}</strong><br>
-      #{stat_array[0]}
-      </li>
+        <li><strong>#{stat_array[1]}</strong><br>
+        #{stat_array[0]}
+        </li>
       eos
+    end.join
+  end
+
+  def season_averages
+    long_ass_string = <<-eos
+    <table>
+      <tr>#{table_header(@scraper.season_averages_hash)}</tr>
+      <tr>#{table_row(@scraper.season_averages_hash)}</tr>"
+    </table>
+    eos
+  end
+
+  def table_header(hash)
+    hash.map do |k, v|
+      "<th>#{k}</th>"
+    end.join
+  end
+
+  def table_row(hash)
+    hash.map do |k, v|
+      "<td>#{v}</td>"
     end.join
   end
 end

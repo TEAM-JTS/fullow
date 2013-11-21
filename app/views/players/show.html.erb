@@ -21,22 +21,17 @@
         </ul>
       </div>
     </div>
+    <div class="panel panel-danger">
+      <div class="panel-heading">
+        <span class="panel-title">Season Averages</span>
+        <span class="pull-right">2013-14</span>
+      </div>
+      <div class="panel-body">
+        <%= raw season_averages %>
+      </div>
+    </div>
 
     <div class="row">
-      <p>
-        <strong>Most Recent Game Stats: </strong>
-        <%= @scraper.most_recent_0 %>
-        <%= @scraper.most_recent_1 %>
-        <%= @scraper.most_recent_2 %>
-        <%= @scraper.most_recent_3 %>
-        <%= @scraper.most_recent_4 %>
-      </p>
-
-      <p>
-        <strong>Season Averages</strong>
-        <%= @scraper.season_averages_hash %>
-      </p>
-
       <p>
         <strong>Career Averages</strong>
         <%= @scraper.career_averages_hash %>
