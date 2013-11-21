@@ -4,6 +4,27 @@
 
 .fullow-stats {
   list-style-type: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+
+.fullow-stats ul {
+  float: left;
+  width: 100%;
+}
+
+.fullow-stats li {
+  display: inline;
+  float: left;
+  width: 32%;
+  text-align: center;
+}
+
+.fullow-stats li strong {
+  font-weight: bold;
+  font-size: x-large;
 }
 
 .ui-helper-hidden-accessible {
