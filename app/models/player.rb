@@ -8,7 +8,7 @@ class Player < ActiveRecord::Base
     "#{self.firstname} #{self.lastname}"
   end
 
-  def slug
-    "#{self.firstname} #{self.lastname}".downcase.gsub(" ", "-")
+  def slugify
+    "#{self.firstname} #{self.lastname}".downcase.gsub(" ", "-").gsub("'", "")
   end
 end

@@ -569,3 +569,8 @@ n497 = Player.create(firstname: "Nikos", lastname: "Zisis")
 n498 = Player.create(firstname: "Luka", lastname: "Zoric")
 n499 = Player.create(firstname: "Aleksey", lastname: "Zozulin")
 
+Player.all.each do |player|
+  player.slug = player.slugify
+  player.save
+end
+
