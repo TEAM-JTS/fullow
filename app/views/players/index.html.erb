@@ -1,6 +1,6 @@
 <script type="text/javascript">
 $(function() {
-    var availablePlayers = <%= raw @players_hash.to_json %>;
+    var availablePlayers = <%= raw @players_array.to_json %>;
 
     $( "#players" ).autocomplete({
       source: availablePlayers,

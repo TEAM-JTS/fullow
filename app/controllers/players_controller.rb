@@ -3,8 +3,8 @@ class PlayersController < ApplicationController
 
   def index
     @players = Player.all
-    @players_hash = @players.map do |p|
-      { label: p.fullname, value: player_path(p.id) }
+    @players_array = @players.map do |p|
+      { label: p.fullname, value: player_path(p.slug) }
     end
   end
 
@@ -16,7 +16,7 @@ class PlayersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_player
-      @player = Player.find(params[:id])
+      @player = Player.find_by(slug: params[:slug])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
