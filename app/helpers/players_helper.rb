@@ -22,6 +22,6 @@ module PlayersHelper
       #{stat_array[0]}
       </li>
       eos
-    end
+    end.join
   end
 end
