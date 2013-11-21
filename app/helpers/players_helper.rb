@@ -17,7 +17,11 @@ module PlayersHelper
       :pts        => @scraper.most_recent_0[:pts].to_i
     }
     hash.sort_by { |k,v| v }.reverse[0..2].map do |stat_array|
-      "<strong>#{stat_array[1]}</strong><br>#{stat_array[0]}"
+      long_ass_string = <<-eos
+      <li><strong>#{stat_array[1]}</strong><br>
+      #{stat_array[0]}
+      </li>
+      eos
     end
   end
 end

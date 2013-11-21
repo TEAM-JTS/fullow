@@ -15,8 +15,10 @@
         <span class="pull-right"><%= last_game_date %></span>
       </div>
       <div class="panel-body">
-        <%= last_game_result %>
-        <%= top_three_stats %>
+        <%= last_game_result %><br>
+        <ul class="fullow-stats">
+        <%= raw top_three_stats %>
+        </ul>
       </div>
     </div>
 
