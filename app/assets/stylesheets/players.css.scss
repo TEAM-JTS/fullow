@@ -3,11 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #fullow-wallpaper{
-  background: url("/assets/home.jpg") no-repeat left top fixed !important;
-  background-size: cover !important;
+  background: url("/assets/home.jpg");
   background-repeat: no-repeat;
-  /*margin-top: -2em;*/
-  height: 700px;
+  height: 900px;
+  background-size:100%;
+  background-position:top;
 }
 
 #fullow-search {
