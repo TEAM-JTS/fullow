@@ -25,9 +25,9 @@ module PlayersHelper
     end.join
   end
 
-  def season_averages
+  def season_averages_table
     long_ass_string = <<-eos
-    <table>
+    <table class="fullow-table">
       <tr>#{table_header(@scraper.season_averages_hash)}</tr>
       <tr>#{table_row(@scraper.season_averages_hash)}</tr>"
     </table>
@@ -36,7 +36,14 @@ module PlayersHelper
 
   def table_header(hash)
     hash.map do |k, v|
-      "<th>#{k}</th>"
+      case k
+      when :threepointp
+        "<th title=\"3-Point Field Goal Percentage\">3p%</th>"
+      when :turnovers
+        "<th title=\"Turnovers Per Game\">topg</th>"
+      else
+        "<th>#{k}</th>"
+      end
     end.join
   end
 

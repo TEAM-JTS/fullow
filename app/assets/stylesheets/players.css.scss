@@ -27,6 +27,15 @@
   font-size: x-large;
 }
 
+.fullow-table {
+  width: 100%;
+}
+
+.fullow-table th, td {
+  border: thin solid #282828;
+  text-align: center;
+}
+
 .ui-helper-hidden-accessible {
   display:none;
 }
