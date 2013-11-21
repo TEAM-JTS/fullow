@@ -1,69 +1,62 @@
 <div class="container">
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<%= link_to 'Search', players_path %>
-<p id="notice"><%= notice %></p>
-<div class="row">
-  <div class="col-md-6">
-    <div class="jumbotron">
-      <h1><%= @player.firstname %> <%= @player.lastname %></h1>
-      <img src="<%= @scraper.picture %>">
-    </div>
-  </div>
-  <div class="col-md-6">
-
-    <div class="panel panel-danger">
-      <div class="panel-heading">
-        <span class="panel-title">Next Game:&nbsp;&nbsp;&nbsp;</span>
-        <span><%= @scraper.game_matchup %></span>
-        <span class="pull-right"><%= @scraper.game_time %> <%= @scraper.game_day %></span>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <%= link_to 'Search', players_path %>
+  <p id="notice"><%= notice %></p>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="jumbotron">
+        <h1><%= @player.firstname %> <%= @player.lastname %></h1>
+        <img src="<%= @scraper.picture %>">
       </div>
     </div>
-
-    <div class="panel panel-danger">
-      <div class="panel-heading">
-        <span class="panel-title">Last Game</span>
-        <span class="pull-right"><%= last_game_date %></span>
+    <div class="col-md-6">
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <span class="panel-title">Next Game:&nbsp;&nbsp;&nbsp;</span>
+          <span><%= @scraper.game_matchup %></span>
+          <span class="pull-right"><%= @scraper.game_time %> <%= @scraper.game_day %></span>
+        </div>
       </div>
-      <div class="panel-body">
-        <%= last_game_result %><br>
-        <ul class="fullow-stats">
-        <%= raw top_three_stats %>
-        </ul>
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <span class="panel-title">Last Game</span>
+          <span class="pull-right"><%= last_game_date %></span>
+        </div>
+        <div class="panel-body">
+          <%= last_game_result %><br>
+          <ul class="fullow-stats">
+          <%= raw top_three_stats %>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <span class="panel-title">Season Averages</span>
+          <span class="pull-right">2013-14</span>
+        </div>
+        <div class="panel-body">
+          <%= raw season_averages_table %>
+        </div>
+      </div>
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <span class="panel-title">Career Averages</span>
+        </div>
+        <div class="panel-body">
+          <%= raw career_averages_table %>
+        </div>
       </div>
     </div>
-
-    <div class="panel panel-danger">
-      <div class="panel-heading">
-        <span class="panel-title">Season Averages</span>
-        <span class="pull-right">2013-14</span>
-      </div>
-      <div class="panel-body">
-        <%= raw season_averages_table %>
-      </div>
-    </div>
-
-    <div class="panel panel-danger">
-      <div class="panel-heading">
-        <span class="panel-title">Career Averages</span>
-      </div>
-      <div class="panel-body">
-        <%= raw career_averages_table %>
-      </div>
-    </div>
-  </div>
-
 </div>
 
 <div class="row" style="margin-top:2em;">
-
   <% begin %>
     <div class="col-sm-6">
       <a class="twitter-timeline" href="https://twitter.com/jlin7" data-widget-id="402571380798922752" data-screen-name="<%= @player.social_link.twitter.gsub("https://twitter.com/","") %>"></a>
@@ -71,17 +64,19 @@
     </div>
   <% rescue %>
   <% end %>
-
   <div class="col-sm-6">
     <% @list.each do |part| %>
       <iframe width="456" height="300" src="//www.youtube.com/embed/<%= part %>" frameborder="0" allowfullscreen></iframe><br>
     <% end %>
   </div>
-
 </div>
+
 <div class="row" style="margin-top:2em;">
   <div class="col-sm-6">
-    <div class="fb-comments" data-href="http://localhost:3000/players/275" data-width="456" data-numposts="5" data-colorscheme="light"></div>
+    <div class="fb-comments" data-href="http://localhost:3000/players/275" data-width="456" data-numposts="5" data-colorscheme="light">
+    </div>
   </div>
-</div>
+  <div class="col-sm-6">
+    <div class="fb-like-box" data-href="https://www.facebook.com/LeBron" data-width="456" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="true"></div>
+  </div>
 </div>
