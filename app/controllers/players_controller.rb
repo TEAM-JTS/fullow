@@ -3,8 +3,8 @@ class PlayersController < ApplicationController
 
   def index
     @players = Player.all
-    @players_hash = @players.map do |p|
-      { label: p.fullname, value: player_path(p.id) }
+    @players_array = @players.map do |p|
+      { label: p.fullname, value: player_path(p.slug) }
     end
   end
 
