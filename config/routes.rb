@@ -2,7 +2,7 @@ Fullow::Application.routes.draw do
   root 'players#index'
 
   get 'players/' => 'player#index', as: 'players'
-  get 'players/:id' => 'players#show', as: 'player'
+  get 'players/:slug' => 'players#show', as: 'player'
 
   # get 'players' => 'players#index'
   # get 'players/:id' => 'players#show'
