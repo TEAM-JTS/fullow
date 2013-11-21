@@ -2,6 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#fullow-wallpaper{
+  background: url("/assets/home.jpg") no-repeat left top fixed !important;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  margin-top: -2em;
+  height: 700px;
+}
+
+#fullow-search {
+  background-color: transparent;
+}
+
 .fullow-stats {
   list-style-type: none;
   width: 100%;
