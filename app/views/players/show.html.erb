@@ -7,8 +7,16 @@
       <img src="<%= @scraper.picture %>">
     </div>
   </div>
-
   <div class="col-md-6">
+
+    <div class="panel panel-danger">
+      <div class="panel-heading">
+        <span class="panel-title">Next Game:&nbsp;&nbsp;&nbsp;</span>
+        <span><%= @scraper.game_matchup %></span>
+        <span class="pull-right"><%= @scraper.game_time %> <%= @scraper.game_day %></span>
+      </div>
+    </div>
+
     <div class="panel panel-danger">
       <div class="panel-heading">
         <span class="panel-title">Last Game</span>
@@ -21,6 +29,9 @@
         </ul>
       </div>
     </div>
+
+    
+
     <div class="panel panel-danger">
       <div class="panel-heading">
         <span class="panel-title">Season Averages</span>
@@ -31,42 +42,26 @@
       </div>
     </div>
 
-    <div class="row">
-      <p>
-        <strong>Career Averages</strong>
-        <%= @scraper.career_averages_hash %>
-      </p>
-
-      <p>
-        <strong>Game Day</strong>
-        <%= @scraper.game_day %>
-      </p>
-
-      <p>
-        <strong>Game Time</strong>
-        <%= @scraper.game_time %>
-      </p>
-
-      <p>
-        <strong>Game Matchup</strong>
-        <%= @scraper.game_matchup %>
-      </p>
+    <div class="panel panel-danger">
+      <div class="panel-heading">
+        <span class="panel-title">Career Averages</span>
+      </div>
+      <div class="panel-body">
+        <%= raw career_averages_table %>
+      </div>
     </div>
   </div>
 
-
 </div>
-
-
 <div class="row">
 
-<% begin %>
-  <div class="col-sm-6">
-    <a class="twitter-timeline" href="https://twitter.com/jlin7" data-widget-id="402571380798922752" data-screen-name="<%= @player.social_link.twitter.gsub("https://twitter.com/","") %>"></a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-  </div>
-<% rescue %>
-<% end %>
+  <% begin %>
+    <div class="col-sm-6">
+      <a class="twitter-timeline" href="https://twitter.com/jlin7" data-widget-id="402571380798922752" data-screen-name="<%= @player.social_link.twitter.gsub("https://twitter.com/","") %>"></a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+  <% rescue %>
+  <% end %>
 
   <div class="col-sm-6">
     <% @list.each do |part| %>
@@ -75,5 +70,3 @@
   </div>
 
 </div>
-
-</html>

@@ -29,7 +29,7 @@ module PlayersHelper
     long_ass_string = <<-eos
     <table class="fullow-table">
       <tr>#{table_header(@scraper.season_averages_hash)}</tr>
-      <tr>#{table_row(@scraper.season_averages_hash)}</tr>"
+      <tr>#{table_row(@scraper.season_averages_hash)}</tr>
     </table>
     eos
   end
@@ -51,5 +51,14 @@ module PlayersHelper
     hash.map do |k, v|
       "<td>#{v}</td>"
     end.join
+  end
+
+  def career_averages_table
+    long_ass_string = <<-eos
+      <table class="fullow-table">
+      <tr>#{table_header(@scraper.career_averages_hash)}</tr>
+      <tr>#{table_row(@scraper.career_averages_hash)}</tr>
+      </table>
+    eos
   end
 end
