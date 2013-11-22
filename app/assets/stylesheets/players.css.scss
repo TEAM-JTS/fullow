@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #fullow-wallpaper{
-  background: image-path("home.jpg");
+  background: url(image-path("home.jpg"));
   background-repeat: no-repeat;
   height: 900px;
   background-size:100%;
