@@ -8,7 +8,7 @@ gem 'mechanize'
 gem 'youtube_it'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem 'turbolinks'
+
 gem 'jbuilder', '~> 1.2'
 
 group :production do
