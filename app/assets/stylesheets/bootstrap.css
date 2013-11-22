@@ -5,11 +5,6 @@
 
 .fb-comments, .fb-comments iframe[style] {width: 100% !important;}
 
-article,
-aside,
-details,
-figcaption,
-figure,
 footer,
 header,
 hgroup,
@@ -18,22 +13,6 @@ nav,
 section,
 summary {
   display: block;
-}
-
-audio,
-canvas,
-video {
-  display: inline-block;
-}
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-[hidden],
-template {
-  display: none;
 }
 
 html {
@@ -64,10 +43,6 @@ h1 {
   font-size: 2em;
 }
 
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
 b,
 strong {
   font-weight: bold;
@@ -81,23 +56,6 @@ hr {
   height: 0;
   -moz-box-sizing: content-box;
        box-sizing: content-box;
-}
-
-mark {
-  color: #000;
-  background: #ff0;
-}
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, serif;
-  font-size: 1em;
-}
-
-pre {
-  white-space: pre-wrap;
 }
 
 q {
@@ -126,14 +84,6 @@ sub {
 
 img {
   border: 0;
-}
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-figure {
-  margin: 0;
 }
 
 fieldset {

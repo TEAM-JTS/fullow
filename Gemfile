@@ -49,9 +49,9 @@ gem 'yahoo_nba'
 
 gem 'nokogiri'
 
-gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
-                          :github => 'anjlab/bootstrap-rails',
-                          :branch => '3.0.0'
+# gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+#                           :github => 'anjlab/bootstrap-rails',
+#                           :branch => '3.0.0'
 
 
 # Use ActiveModel has_secure_password
