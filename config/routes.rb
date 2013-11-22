@@ -1,4 +1,4 @@
 Fullow::Application.routes.draw do
-  get '/' => 'players#index', as: 'players'
+  root 'players#'index
   get '/:slug' => 'players#show', as: 'player'
 end
