@@ -11,6 +11,10 @@ gem 'jquery-ui-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
+group :production do
+  gem 'therubyracer'
+end
+
 group :doc do
   gem 'sdoc', require: false
 end
@@ -27,6 +31,11 @@ group :test, :development do
 end
 
 gem 'nokogiri'
+
+group :development do
+  gem 'capistrano', '2.15.5'
+end
+
 
 # gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
 #                           :github => 'anjlab/bootstrap-rails',
