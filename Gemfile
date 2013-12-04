@@ -8,13 +8,12 @@ gem 'mechanize'
 gem 'youtube_it'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-
+gem "bullet"
 gem 'jbuilder', '~> 1.2'
-
+gem 'capistrano', '~>2.0'
 group :production do
   gem 'therubyracer'
 end
-
 group :doc do
   gem 'sdoc', require: false
 end
@@ -32,9 +31,7 @@ end
 
 gem 'nokogiri'
 
-group :development do
-  gem 'capistrano', '2.15.5'
-end
+gem 'rvm-capistrano'
 
 
 # gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
