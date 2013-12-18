@@ -45,7 +45,7 @@ class PlayerScraper
   end
 
   def get_season_averages
-    @season_averages_array = @player_data.css('.oddrow').map{|row| row.css('td').map(&:text)}[2]
+    @season_averages_array = @player_data.css('table')[3].css('.oddrow').map{|row| row.css('td').map(&:text)}[0]
     @season_averages_hash = {gp: @season_averages_array[1], mpg: @season_averages_array[2], fgp: @season_averages_array[4], threepointp: @season_averages_array[6], ftp: @season_averages_array[8], rb: @season_averages_array[9], ast: @season_averages_array[10], blk: @season_averages_array[11], stl: @season_averages_array[12], turnovers: @season_averages_array[14], pts: @season_averages_array[15]}
   end
 
