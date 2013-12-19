@@ -50,7 +50,7 @@ class PlayerScraper
   end
 
   def get_career_averages
-    @career_averages_array = @player_data.css('.evenrow').map{|row| row.css('td').map(&:text)}[2]
+    @career_averages_array = @player_data.css('table')[3].css('.evenrow').map{|row| row.css('td').map(&:text)}[0]
     @career_averages_hash = {gp: @career_averages_array[1], mpg: @career_averages_array[2], fgp: @career_averages_array[4], threepointp: @career_averages_array[6], ftp: @career_averages_array[8], rb: @career_averages_array[9], ast: @career_averages_array[10], blk: @career_averages_array[11], stl: @career_averages_array[12], turnovers: @career_averages_array[14], pts: @career_averages_array[15]}
   end
 
