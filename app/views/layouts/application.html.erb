@@ -16,6 +16,31 @@
   ga('create', 'UA-44809833-2', 'nbastalk.com');
   ga('send', 'pageview');
 
+  $(function() {
+    var availablePlayers = <%= raw @players_array.to_json %>;
+
+    $( ".nav-search" ).autocomplete({
+      source: availablePlayers,
+      select: function( event, ui ) {
+        window.location.href = ui.item.value;
+        event.preventDefault();
+      }
+    });
+
+    $(document).keypress(function(e) {
+      if(e.which == 13) {
+        var player_choice = $( "#players" ).val();
+        var player_hash = $.grep(availablePlayers, function(hash){
+          return hash.label.toLowerCase() == player_choice.toLowerCase();
+        });
+        var value = player_hash[0].value;
+        window.location.href = value;
+        // console.log(player_hash[0].value)
+      }
+    });
+
+  });
+
 </script>
 
 </head>
@@ -41,7 +66,7 @@
     </ul>
     <form class="navbar-form navbar-left" role="search">
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search">
+        <input type="text" class="form-control nav-search" placeholder="Search">
       </div>
       <button type="submit" class="btn btn-default">Search</button>
     </form>
