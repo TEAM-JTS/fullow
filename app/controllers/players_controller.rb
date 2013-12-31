@@ -13,6 +13,13 @@ class PlayersController < ApplicationController
     @list = GetSocial.new.get_youtube(@player.fullname)
   end
 
+  def top10
+
+  end
+
+  def discuss
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_player
