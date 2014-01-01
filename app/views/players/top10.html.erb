@@ -1,5 +1,13 @@
 <ul class="list-group">
-  <li class="list-group-item james-list">
+  <% 10.times do |rank| %>
+    <li class="list-group-item james-list">
+    <span class="badge pull-left"><%= rank+1 %></span>
+    <a href="/<%=@top_10[-(rank)-1].slug %>"><%= @top_10[-(rank)-1].fullname %></a>
+    </li>
+  <% end %>
+</ul>
+
+ <!--  <li class="list-group-item james-list">
     <span class="badge pull-left">1</span>
     Lebron James
   </li>
@@ -39,4 +47,4 @@
     <span class="badge pull-left">10</span>
     Lebron James
   </li>
-</ul>
+</ul> -->
