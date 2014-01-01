@@ -8,14 +8,15 @@ class PlayersController < ApplicationController
   def show
     @scraper = PlayerScraper.new(@player)
     @list = GetSocial.new.get_youtube(@player.fullname)
+    @player.views += 1
+    @player.save
   end
 
   def top10
     sorted_players = @players.sort_by do |player| 
       player.views
     end
-    @top_10 = sorted_players[0..10]
-
+    @top_10 = sorted_players[-10..-1]
   end
 
   def discuss
