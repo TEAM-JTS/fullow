@@ -1,11 +1,8 @@
 class PlayersController < ApplicationController
   before_action :set_player, only: [:show]
+  before_action :list_players
 
   def index
-    @players = Player.all
-    @players_array = @players.map do |p|
-      { label: p.fullname, value: player_path(p.slug) }
-    end
   end
 
   def show
@@ -29,5 +26,12 @@ class PlayersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def player_params
       params.require(:player).permit(:firstname, :lastname)
+    end
+
+    def list_players
+      @players = Player.all
+      @players_array = @players.map do |p|
+        { label: p.fullname, value: player_path(p.slug) }
+      end
     end
 end
