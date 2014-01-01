@@ -68,6 +68,25 @@
   max-width:1200px;
 }
 
+.about-custom {
+  background-color: rgba(245, 245, 245, 0.8);
+  position: absolute;
+  left: 25%;
+  top: 20%;
+  max-width: 50%;
+}
+
+ /*index page customization*/
+.index-total {
+  height: 100%;
+  width: auto;
+  background: image-url("a.jpg") no-repeat center center fixed #000; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .ui-widget {}
 .ui-widget-content {}
 .ui-corner-all {}

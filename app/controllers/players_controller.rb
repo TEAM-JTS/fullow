@@ -11,6 +11,10 @@ class PlayersController < ApplicationController
   end
 
   def top10
+    sorted_players = @players.sort_by do |player| 
+      player.views
+    end
+    @top_10 = sorted_players[0..10]
 
   end
 
@@ -19,7 +23,7 @@ class PlayersController < ApplicationController
 
   def about
   end
-  
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_player
