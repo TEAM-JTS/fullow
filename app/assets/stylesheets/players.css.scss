@@ -87,6 +87,15 @@
   background-size: cover;
 }
 
+.james-modal {
+  position: fixed;
+  top:50%;
+  left:50%;
+  margin-top: -100px;
+  margin-left: -250px;
+  z-index: 100;
+}
+
 .ui-widget {}
 .ui-widget-content {}
 .ui-corner-all {}

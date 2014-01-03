@@ -15,4 +15,10 @@
 //= require jquery_ujs
 
 //= require_tree .
+$(function(){
+  $(".james-modal").show();
+});
 
+$(window).load(function(){
+  $(".james-modal").hide();
+});
