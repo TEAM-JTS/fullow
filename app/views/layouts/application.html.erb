@@ -22,7 +22,14 @@
     $( ".nav-search" ).autocomplete({
       source: availablePlayers,
       select: function( event, ui ) {
+        // var name = ui.item.label;
+        // $('.ui-autocomplete-input').val(name);
         window.location.href = ui.item.value;
+        event.preventDefault();
+      },
+      focus: function(event,ui){
+        var name = ui.item.label;
+        $('.ui-autocomplete-input').val(name);
         event.preventDefault();
       }
     });

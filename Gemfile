@@ -30,7 +30,8 @@ end
 gem 'nokogiri'
 
 gem 'rvm-capistrano'
-
+gem "binding_of_caller"
+gem "better_errors"
 
 # gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
 #                           :github => 'anjlab/bootstrap-rails',
