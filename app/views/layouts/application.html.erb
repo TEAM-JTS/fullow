@@ -36,7 +36,7 @@
 
     $(document).keypress(function(e) {
       if(e.which == 13) {
-        var player_choice = $( "#players" ).val();
+        var player_choice = $('.ui-autocomplete-input').val();
         var player_hash = $.grep(availablePlayers, function(hash){
           return hash.label.toLowerCase() == player_choice.toLowerCase();
         });
