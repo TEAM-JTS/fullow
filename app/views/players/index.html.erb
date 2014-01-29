@@ -3,7 +3,6 @@
 
   $(function() {
     var availablePlayers = <%= raw @players_array.to_json %>;
-
     $( "#players" ).autocomplete({
       source: availablePlayers,
       select: function( event, ui ) {
@@ -35,7 +34,7 @@
 
 </script>
 <div id="fullow-wallpaper">
-  <h2 style="margin-left:1em"><font color="darkred">
+  <h2 style="margin-left:1em"><font color="white">
     <br><br><br><br>NBAStalk </font></style>
       <input id="players" placeholder="Carmelo Anthony" />
   </h2>

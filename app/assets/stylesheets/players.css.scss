@@ -38,6 +38,7 @@
   background-color: transparent;
 }
 
+
 .fullow-stats {
   list-style-type: none;
   width: 100%;
@@ -118,6 +119,10 @@
   margin-top: -100px;
   margin-left: -250px;
   z-index: 100;
+}
+
+.j-bottom {
+  border-bottom: thick solid #cc0000;
 }
 
 .ui-widget {}
