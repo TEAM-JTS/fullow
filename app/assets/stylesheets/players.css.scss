@@ -3,7 +3,31 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #fullow-wallpaper{
-  background: url(image-path("d.jpg"));
+  background: url(image-path("pg.jpg"));
+  background-repeat: no-repeat;
+  height: 900px;
+  background-size:100%;
+  background-position:top;
+}
+
+#fullow-discuss {
+  background: url(image-path("pg.jpg"));
+  background-repeat: no-repeat;
+  height: 900px;
+  background-size:100%;
+  background-position:top;
+}
+
+#fullow-about {
+  background: url(image-path("klove.jpg"));
+  background-repeat: no-repeat;
+  height: 900px;
+  background-size:100%;
+  background-position:top;
+}
+
+#fullow-top {
+  background: url(image-path("klove.jpg"));
   background-repeat: no-repeat;
   height: 900px;
   background-size:100%;
