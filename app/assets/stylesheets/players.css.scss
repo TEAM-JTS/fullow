@@ -1,43 +1,39 @@
-// Place all the styles related to the players controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 
-#fullow-wallpaper{
+#fullow-wallpaper {
   background: url(image-path("d.jpg"));
   background-repeat: no-repeat;
   height: 900px;
-  background-size:100%;
-  background-position:top;
+  background-size: 100%;
+  background-position: top;
 }
 
 #fullow-discuss {
   background: url(image-path("pg.jpg"));
   background-repeat: no-repeat;
   height: 900px;
-  background-size:100%;
-  background-position:top;
+  background-size: 100%;
+  background-position: top;
 }
 
 #fullow-about {
   background: url(image-path("klove.jpg"));
   background-repeat: no-repeat;
   height: 900px;
-  background-size:100%;
-  background-position:top;
+  background-size: 100%;
+  background-position: top;
 }
 
 #fullow-top {
   background: url(image-path("klove.jpg"));
   background-repeat: no-repeat;
   height: 900px;
-  background-size:100%;
-  background-position:top;
+  background-size: 100%;
+  background-position: top;
 }
 
 #fullow-search {
   background-color: transparent;
 }
-
 
 .fullow-stats {
   list-style-type: none;
@@ -45,40 +41,40 @@
   padding: 0;
   margin: 0;
   float: left;
-}
-
-.fullow-stats ul {
-  float: left;
-  width: 100%;
-}
-
-.fullow-stats li {
-  display: inline;
-  float: left;
-  width: 32%;
-  text-align: center;
-}
-
-.fullow-stats li strong {
-  font-weight: bold;
-  font-size: x-large;
+  ul {
+    float: left;
+    width: 100%;
+  }
+  li {
+    display: inline;
+    float: left;
+    width: 32%;
+    text-align: center;
+    strong {
+      font-weight: bold;
+      font-size: x-large;
+    }
+  }
 }
 
 .fullow-table {
   width: 100%;
+  th {
+    border: thin solid #282828;
+    text-align: center;
+  }
 }
 
-.fullow-table th, td {
+td {
   border: thin solid #282828;
   text-align: center;
 }
 
 .ui-helper-hidden-accessible {
-  display:none;
+  display: none;
 }
 
-.ui-autocomplete {}
-.ui-front {}
+.ui-autocomplete!, .ui-front! {}
 
 .ui-menu {
   background: white;
@@ -86,11 +82,11 @@
   list-style-type: none;
   padding: 0;
   width: 20em;
-      cursor: pointer;
+  cursor: pointer;
 }
 
-.james-list{
-  max-width:1200px;
+.james-list {
+  max-width: 1200px;
 }
 
 .about-custom {
@@ -101,11 +97,12 @@
   max-width: 50%;
 }
 
- /*index page customization*/
+/*index page customization*/
+
 .index-total {
   height: 100%;
   width: auto;
-  background: image-url("a.jpg") no-repeat center center fixed #000; 
+  background: image-url("a.jpg") no-repeat center center fixed black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -114,8 +111,8 @@
 
 .james-modal {
   position: fixed;
-  top:50%;
-  left:50%;
+  top: 50%;
+  left: 50%;
   margin-top: -100px;
   margin-left: -250px;
   z-index: 100;
@@ -125,6 +122,4 @@
   border-bottom: thick solid #cc0000;
 }
 
-.ui-widget {}
-.ui-widget-content {}
-.ui-corner-all {}
+.ui-widget!, .ui-widget-content!, .ui-corner-all! {}
