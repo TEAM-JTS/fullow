@@ -7,7 +7,7 @@ class PlayersController < ApplicationController
 
   def show
     @scraper = PlayerScraper.new(@player)
-    @list = GetSocial.new.get_youtube(@player.fullname)
+    @list = GetYoutube.new.get_youtube(@player.fullname)
     @player.views += 1
     @player.save
   end

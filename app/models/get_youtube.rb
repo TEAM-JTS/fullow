@@ -1,4 +1,4 @@
-class GetSocial
+class GetYoutube
   attr_reader :all_video_urls
   def initialize
 
