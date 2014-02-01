@@ -1,53 +1,8 @@
-  
-  <ul class="list-group">
-    <% 10.times do |rank| %>
-      <li class="list-group-item james-list">
-      <span class="badge pull-left"><%= rank+1 %></span>
-      <a href="/<%=@top_10[-(rank)-1].slug %>"><%= @top_10[-(rank)-1].fullname %></a>
-      </li>
-    <% end %>
-  </ul>
-
-
-
- <!--  <li class="list-group-item james-list">
-    <span class="badge pull-left">1</span>
-    Lebron James
-  </li>
+<ul class="list-group">
+  <% 10.times do |rank| %>
     <li class="list-group-item james-list">
-    <span class="badge pull-left">2</span>
-    <a href="#">Lebron James</a>
-  </li>
-  <li class="list-group-item james-list">
-    <span class="badge pull-left">3</span>
-     Lebron James
-  </li>
-  <li class="list-group-item james-list">
-    <span class="badge pull-left">4</span>
-    Lebron James
-  </li>
-  <li class="list-group-item james-list">
-    <span class="badge pull-left">5</span>
-    Lebron James
-  </li>
-  <li class="list-group-item james-list">
-    <span class="badge pull-left">6</span>
-    Lebron James
-  </li>
-  <li class="list-group-item james-list">
-    <span class="badge pull-left">7</span>
-    Lebron James
-  </li>
-  <li class="list-group-item james-list">
-    <span class="badge pull-left">8</span>
-    Lebron James
-  </li>
-  <li class="list-group-item james-list">
-    <span class="badge pull-left">9</span>
-    Lebron James
-  </li>
-  <li class="list-group-item james-list">
-    <span class="badge pull-left">10</span>
-    Lebron James
-  </li>
-</ul> -->
+    <span class="badge pull-left"><%= rank+1 %></span>
+    <a href="/<%=@top_10[-(rank)-1].slug %>"><%= @top_10[-(rank)-1].fullname %></a>
+    </li>
+  <% end %>
+</ul>

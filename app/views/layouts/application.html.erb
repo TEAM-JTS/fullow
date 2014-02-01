@@ -8,22 +8,20 @@
 
 
 <script>
+// add google analytics
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
   ga('create', 'UA-44809833-2', 'nbastalk.com');
   ga('send', 'pageview');
 
   $(function() {
+    // add autocomplete in navbar
     var availablePlayers = <%= raw @players_array.to_json %>;
-
     $( ".nav-search" ).autocomplete({
       source: availablePlayers,
       select: function( event, ui ) {
-        // var name = ui.item.label;
-        // $('.ui-autocomplete-input').val(name);
         window.location.href = ui.item.value;
         event.preventDefault();
       },
@@ -33,7 +31,7 @@
         event.preventDefault();
       }
     });
-
+    // gets enter to work with the autocomplete
     $(document).keypress(function(e) {
       if(e.which == 13) {
         var player_choice = $('.ui-autocomplete-input').val();
@@ -42,12 +40,9 @@
         });
         var value = player_hash[0].value;
         window.location.href = value;
-        // console.log(player_hash[0].value)
       }
     });
-
   });
-
 </script>
 
 </head>

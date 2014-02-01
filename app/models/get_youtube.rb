@@ -13,6 +13,6 @@ class GetYoutube
  
 
   def parse_string(string)
-    v = string.scan(/(v.)(\w+)/)[0][1]
+    string.scan(/(v.)(\w+)/)[0][1]
   end
 end

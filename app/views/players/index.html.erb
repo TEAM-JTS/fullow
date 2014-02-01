@@ -1,13 +1,10 @@
 <script type="text/javascript">
-
-
   $(function() {
+    // index's autocomplete search
     var availablePlayers = <%= raw @players_array.to_json %>;
     $( "#players" ).autocomplete({
       source: availablePlayers,
       select: function( event, ui ) {
-        // var name = ui.item.label;
-        // $('.ui-autocomplete-input').val(name);
         window.location.href = ui.item.value;
         event.preventDefault();
       },
@@ -17,7 +14,6 @@
         event.preventDefault();
       }
     });
-
     $(document).keypress(function(e) {
       if(e.which == 13) {
         var player_choice = $( "#players" ).val();
@@ -26,10 +22,8 @@
         });
         var value = player_hash[0].value;
         window.location.href = value;
-        // console.log(player_hash[0].value)
       }
     });
-
   });
 
 </script>

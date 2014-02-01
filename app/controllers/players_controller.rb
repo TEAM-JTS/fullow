@@ -6,7 +6,7 @@ class PlayersController < ApplicationController
   end
 
   def show
-    @scraper = PlayerScraper.new(@player)
+    @scraper = GetGameStats.new(@player)
     @list = GetYoutube.new.get_youtube(@player.fullname)
     @player.views += 1
     @player.save

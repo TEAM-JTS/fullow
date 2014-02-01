@@ -11,6 +11,7 @@ gem 'jquery-ui-rails'
 gem "bullet"
 gem 'jbuilder', '~> 1.2'
 gem 'capistrano', '~>2.0'
+
 group :production do
   gem 'therubyracer'
 end
@@ -32,8 +33,3 @@ gem 'nokogiri'
 gem 'rvm-capistrano'
 gem "binding_of_caller"
 gem "better_errors"
-
-# gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
-#                           :github => 'anjlab/bootstrap-rails',
-#                           :branch => '3.0.0'
-

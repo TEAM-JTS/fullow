@@ -1,4 +1,4 @@
-class PlayerScraper
+class GetGameStats
   require 'open-uri'
 
   attr_reader :player, :espn_url, :player_data, :picture, :most_recent_0, :most_recent_1,:most_recent_2,:most_recent_3,:most_recent_4, :season_averages_hash, :career_averages_hash, :game_day, :game_time, :game_matchup
